@@ -1,3 +1,5 @@
 #!/bin/bash
-PORT=${PORT:-8000}
-exec uvicorn main:app --host 0.0.0.0 --port $PORT
+
+# Start the FastAPI application with uvicorn
+# Use the PORT environment variable provided by Railway
+exec uvicorn main:app --host 0.0.0.0 --port ${PORT:-8000}
