@@ -224,11 +224,4 @@ async def enhance_batch(
 
 if __name__ == "__main__":
     import uvicorn
-    port = int(os.environ.get("PORT", 8000))
-    uvicorn.run(app, host="0.0.0.0", port=port)
-else:
-    # For production deployment, also run when imported
-    import uvicorn
-    port = int(os.environ.get("PORT", 8000))
-    if os.environ.get("RAILWAY_ENVIRONMENT"):  # Only auto-run on Railway
-        uvicorn.run(app, host="0.0.0.0", port=port)
+    uvicorn.run(app, host="0.0.0.0", port=8000)
